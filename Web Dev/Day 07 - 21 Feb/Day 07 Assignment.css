@@ -1,0 +1,53 @@
+/* PART A (Selectors) 
+Qs1.Give the h1 header a unique id-“mainTopic” & set its color to blue using the id selector. */
+
+#mainTopic{
+    color: blue;
+}
+
+/* Qs2.Align all the text in the page to the center using a universal selector. */
+
+*{
+    text-align: center;
+}
+
+h1,h3,h5{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.para{
+    color: white;
+    background-color: cornflowerblue;
+}
+
+
+div button{
+    background-color: purple;
+    color: azure;
+}
+
+/* Part B (Pseudo class and elements) */
+
+button:hover{
+    background-color: yellow;
+    color: blue;
+}
+
+.para :nth-of-type(odd){
+    color: yellow;
+}
+
+h1::first-letter{
+    color: red;
+}
+
+input[type="checkbox"]:checked +label{
+    color: darkgreen;
+    font-weight: bold;
+}
+
+/* Order these rules according to their specificity
+1. #mainContent - ID
+2. .main - class
+3. div.main - although it in an element in the front (its specificity 0,1,1)
+4. h1 - pure element */
